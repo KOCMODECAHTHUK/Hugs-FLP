@@ -1,4 +1,4 @@
-{-
+{- №1
     (7.03^(1-sqrt 4.92))/(3*4.92-tg(7.03))
 	x = 7.03, y = 4.92;
 	(x**(1-sqrt y))/(3*y-tan(x))
@@ -10,18 +10,15 @@ re1 x y = x**(1-sqrt y)/(3*y-tan x)
 -}
 re2 l = odd (maximum l - minimum l) == (l !! 3 /= minimum l)
 
-re3 :: Char -> Char -> String -> String
-re3 p z [] = []
-re3 p z (h:t) | h == p = z : re3 p z t
-              | otherwise = h : re3 p z t
+{- №4
+	snd (3,5) : init [1,2,3,4,5] == [5,1,2,3,4]
+-}
 
-fib 1 = 1
-fib 2 = 1
-fib n = fib (n-1) + fib (n-2)
+{- №5
+	Заменяет в заданном списке-строке все вхождения 
+	заданного символа на другой заданный символ.
+-}
 
-fact 1 = 1
-fact n = n*fact (n-1)
-
-re4 n m		
-		| odd(n+m)		= fact(n) - fib(m)
-		| otherwise		= fib((n+m)/2) - fact((n+m)/2)
+{- №6
+	??
+-}
