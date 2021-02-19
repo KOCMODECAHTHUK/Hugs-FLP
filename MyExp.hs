@@ -25,3 +25,10 @@ fact n = n*fact (n-1)
 re4 n m		
 		| odd(n+m)		= fact(n) - fib(m)
 		| otherwise		= fib((n+m)/2) - fact((n+m)/2)
+
+replacefun :: Eq a => [a] -> a -> a -> [a]
+replacefun [] _ _ = []
+replacefun (x:xs) element1 element2 
+            | x == element1 = element2 : replacefun xs element1 element2
+            | otherwise     = x : replacefun xs element1 element2
+--replacefun "hello world" 'l' '$'
