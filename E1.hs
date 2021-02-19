@@ -51,11 +51,11 @@ replaceFun (x:xs) element1 element2
 	факториала. С помощью них определите собственную функцию, записанную в условной
 	математической нотации. (fib(n)  - означает n-е число Фибоначчи).
 -}
+fib 0 = 0
 fib 1 = 1
-fib 2 = 1
 fib n = fib (n-1) + fib (n-2)
 
-fact 1 = 1
+fact 0 = 1
 fact n = n*fact (n-1)
 -- $ fact 2 - fib 5 
 -- > -3
@@ -70,3 +70,5 @@ choiceFun n m
 -- > -3
 -- $ choiceFun 3 5
 -- > -21
+-- $ choiceFun 4 5
+-- > 19
